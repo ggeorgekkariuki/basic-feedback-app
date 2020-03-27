@@ -6,14 +6,14 @@ from send_mail import send_mail
 app = Flask(__name__)
 
 #Configurations 
-ENV = 'dev'
+ENV = 'prod'
 
 if ENV == 'dev':
     app.debug = True
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:egroeg@localhost/lexus'
+    #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:PASSWORD@localhost/lexus'
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = ''
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://txlzzbzxtdttgf:80b88875f3a12afb48986e80e7a752ca87a4492e47ddc49bf0e1d95beeb3c8ac@ec2-54-210-128-153.compute-1.amazonaws.com:5432/dbt9dk9m51dnk0'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
