@@ -1,0 +1,24 @@
+Create the environment using
+    - pip install pipenv
+Open the shell
+    - pipenv shell
+
+To create the feeback table, after creating the model and the class constructor,
+    exit the server and go into the 'python' shell
+    - python
+Next import the SQLAlchemy object created
+    - from app import db
+Create all
+    - db.create_all()
+
+THE TABLE IS CREATED IN POSTGRESQL
+
+Upon successful upload into the database on POSTGRES, we want to email via Mailtrap.io
+GO TO send_mail.py
+
+HEROKU
+Download the cli
+In the pipenv shell
+ - heroku login
+Create a new app
+ - heroku create <app_name>
